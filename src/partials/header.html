@@ -1,13 +1,41 @@
 <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+    molestias laudantium deleniti sed, aliquid suscipit doloremque
+    exercitationem accusantium dignissimos eligendi.
+  </p>
+  <!-- Элементы для вызова модальных окон, могут быть любые -->
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+  <a href="#" class="js-open-modal" data-modal="1">Открыть окно 1</a>
+  <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a>
+
+  <!-- Несколько модальных окон -->
+
+  <div class="modal" data-modal="1">
+    <!--   Svg иконка для закрытия окна  -->
+    <svg
+      class="modal__cross js-modal-close"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+      />
+    </svg>
+    <p class="modal__title">Заголовок окна 1</p>
+  </div>
+
+  <div class="modal" data-modal="2">
+    <!--   Svg иконка для закрытия окна  -->
+    <svg
+      class="modal__cross js-modal-close"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+      />
+    </svg>
+    <p class="modal__title">Заголовок окна 2</p>
+  </div>
 </header>
