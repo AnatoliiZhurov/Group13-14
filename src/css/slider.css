@@ -1,6 +1,7 @@
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 1200px;
+  height: 500px;
+  gap: 18px;
 }
 .swiper-pagination-bullet {
   width: 30px;
@@ -8,4 +9,22 @@
 }
 .swiper-pagination-bullet-active {
   background-color: blueviolet;
+}
+
+.swiper-slide {
+  background-color: aquamarine;
+}
+
+.swiper-slide {
+  width: 320px;
+  height: 400px;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  --swiper-pagination-bottom: 0;
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
 }

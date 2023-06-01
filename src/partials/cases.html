@@ -1,3 +1,44 @@
 <section class="cases">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, temporibus!
+  <div class="video">
+    <div id="video-wrapper" class="wrapper-video">
+      <iframe
+        src="https://www.youtube.com/embed/xPe1jMuX32s"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <img
+      id="preview-image"
+      class="dog-pick"
+      src="https://picsum.photos/id/237/960/720"
+      alt="Картинка"
+    />
+  </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var videoIframe = document.querySelector('.video iframe');
+    var previewImage = document.getElementById('preview-image');
+
+    // Обробник події для відео
+    videoIframe.addEventListener('click', function () {
+      this.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        '*'
+      );
+      previewImage.style.display = 'none';
+    });
+
+    // Обробник події для картинки
+    previewImage.addEventListener('click', function () {
+      videoIframe.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        '*'
+      );
+      this.style.display = 'none';
+    });
+  });
+</script>
